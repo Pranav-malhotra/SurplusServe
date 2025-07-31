@@ -1,57 +1,68 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="bg-primary text-primary-foreground py-4">
+    <div className="min-h-screen relative">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
+      
+      {/* Navigation */}
+      <div className="relative z-50">
         <Navigation />
       </div>
       
-      <div className="container mx-auto px-8 py-12">
+      {/* Content */}
+      <div className="relative z-20 container mx-auto px-8 py-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-center mb-8">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-center mb-8 text-white">Contact Us</h1>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <Card>
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardHeader>
-                <CardTitle>Get in Touch</CardTitle>
+                <CardTitle className="text-white">Get in Touch</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h3 className="font-semibold">Email</h3>
-                  <p className="text-muted-foreground">contact@foodheroacademia.com</p>
+                  <h3 className="font-semibold text-white">Email</h3>
+                  <p className="text-white/80">contact@surplusserve.com</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold">Phone</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <h3 className="font-semibold text-white">Phone</h3>
+                  <p className="text-white/80">+1 (555) 123-4567</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold">Address</h3>
-                  <p className="text-muted-foreground">
-                    123 Hero Street<br />
+                  <h3 className="font-semibold text-white">Address</h3>
+                  <p className="text-white/80">
+                    123 Surplus Street<br />
                     Food City, FC 12345
                   </p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardHeader>
-                <CardTitle>Office Hours</CardTitle>
+                <CardTitle className="text-white">Office Hours</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h3 className="font-semibold">Monday - Friday</h3>
-                  <p className="text-muted-foreground">9:00 AM - 6:00 PM</p>
+                  <h3 className="font-semibold text-white">Monday - Friday</h3>
+                  <p className="text-white/80">9:00 AM - 6:00 PM</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold">Saturday</h3>
-                  <p className="text-muted-foreground">10:00 AM - 4:00 PM</p>
+                  <h3 className="font-semibold text-white">Saturday</h3>
+                  <p className="text-white/80">10:00 AM - 4:00 PM</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold">Sunday</h3>
-                  <p className="text-muted-foreground">Closed</p>
+                  <h3 className="font-semibold text-white">Sunday</h3>
+                  <p className="text-white/80">Closed</p>
                 </div>
               </CardContent>
             </Card>

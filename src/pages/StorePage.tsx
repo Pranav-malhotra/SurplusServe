@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
-import SocialSidebar from "@/components/SocialSidebar";
 import storeBackground from "@/assets/store-background.jpg";
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 const StorePage = () => {
+  // Remove the Predictive Shorting Tool and related state/handlers from this page.
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Background Image */}
@@ -18,15 +23,11 @@ const StorePage = () => {
       {/* Navigation */}
       <Navigation />
 
-      {/* Social Sidebar */}
-      <SocialSidebar />
-
+      
       {/* Main Content */}
       <div className="relative z-10 flex flex-col justify-center min-h-screen px-8">
         <div className="max-w-2xl">
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-4 tracking-wide">
-            SurplusServe
-          </h1>
+          
           
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-12">
             Departmental Store

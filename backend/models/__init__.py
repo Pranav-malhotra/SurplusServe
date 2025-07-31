@@ -13,7 +13,11 @@ class User(Base):
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
 
     events = relationship("Event", back_populates="owner")
-    surplus_listings = relationship("SurplusListing", back_populates="owner")
+    surplus_listings = relationship(
+        "SurplusListing",
+        back_populates="owner",
+        foreign_keys="SurplusListing.user_id"
+    )
     feedbacks = relationship("Feedback", back_populates="user")
 
 class Event(Base):

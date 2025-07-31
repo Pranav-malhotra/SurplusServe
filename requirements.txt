@@ -256,3 +256,10 @@ wrapt==1.16.0
 xlrd==2.0.1
 XlsxWriter==3.2.0
 yarl==1.15.4
+fastapi
+uvicorn
+sqlalchemy
+mysql-connector-python
+email-validator
+python-dotenv
+pydantic[email]

@@ -10,7 +10,9 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",
     "http://localhost:5173",
+    "http://localhost:8080",
 ]
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -21,7 +23,6 @@ app.add_middleware(
 )
 
 app.include_router(api_router)
-
 @app.get("/")
 def read_root():
     return {"message": "SurplusServe FastAPI backend is running."}
