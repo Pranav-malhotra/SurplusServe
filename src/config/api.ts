@@ -1,4 +1,4 @@
-// API Configuration
+// API Configuration - Updated for production deployment
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://surplusserve-5xmz.onrender.com';
 
 export const API_ENDPOINTS = {
