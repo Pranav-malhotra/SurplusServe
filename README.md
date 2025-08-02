@@ -1,24 +1,8 @@
-# Welcome to your Lovable project
 
-## Project info
-
-**URL**: https://lovable.dev/projects/6c0ab25d-013a-4e5d-b6f5-6c222a30224c
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/6c0ab25d-013a-4e5d-b6f5-6c222a30224c) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+<img width="1919" height="964" alt="Screenshot 2025-08-02 141748" src="https://github.com/user-attachments/assets/063e702a-5763-48e9-8096-5b39fba2ed68" />
+<img width="1915" height="966" alt="Screenshot 2025-08-02 141736" src="https://github.com/user-attachments/assets/b78b1254-2037-4f67-8a0f-7bd0ad50858f" />
+<img width="1919" height="963" alt="Screenshot 2025-08-02 141707" src="https://github.com/user-attachments/assets/4a75dba6-f25e-4a14-a1b3-74a34765435b" />
+<img width="1919" height="971" alt="Screenshot 2025-08-02 141759" src="https://github.com/user-attachments/assets/5dd1d51c-04d9-4f26-b917-5872ac3fdc80" />
 
 Follow these steps:
 
@@ -55,22 +39,11 @@ npm run dev
 This project is built with:
 
 - Vite
-- TypeScript
+- JavaScript
 - React
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/6c0ab25d-013a-4e5d-b6f5-6c222a30224c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
 
 # Backend (FastAPI)
 
@@ -82,4 +55,4 @@ This project includes a FastAPI backend to power predictive food shorting, surpl
 2. Install dependencies: `pip install -r requirements.txt`
 3. Start the server: `uvicorn backend.main:app --reload`
 
----
+
