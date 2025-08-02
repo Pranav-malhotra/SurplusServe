@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import heroBackground from "@/assets/hero-background.jpg";
+import API_ENDPOINTS from "@/config/api";
 
 const BrowseListingsPage = () => {
   const user = JSON.parse(localStorage.getItem("user") || "{}");
@@ -18,7 +19,7 @@ const BrowseListingsPage = () => {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("http://localhost:8000/surplus-listings");
+      const res = await fetch(API_ENDPOINTS.SURPLUS_LISTINGS);
       if (!res.ok) throw new Error("Failed to fetch listings");
       const data = await res.json();
       setListings(data);
@@ -36,7 +37,7 @@ const BrowseListingsPage = () => {
   const handleClaim = async (id: number) => {
     setError("");
     try {
-      const res = await fetch(`http://localhost:8000/surplus-listings/${id}/claim`, {
+      const res = await fetch(API_ENDPOINTS.CLAIM_LISTING(id), {
         method: "PATCH"
       });
       if (!res.ok) throw new Error("Failed to claim listing");

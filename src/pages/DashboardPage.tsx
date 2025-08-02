@@ -8,6 +8,7 @@ import Navigation from "@/components/Navigation";
 import { useNavigate } from "react-router-dom";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import heroBackground from "@/assets/hero-background.jpg";
+import API_ENDPOINTS from "@/config/api";
 
 const DashboardPage = () => {
   const user = JSON.parse(localStorage.getItem("user") || "null");
@@ -62,8 +63,8 @@ const DashboardPage = () => {
     try {
       setStatsLoading(true);
       const [statsRes, activityRes] = await Promise.all([
-        fetch(`http://localhost:8000/dashboard/stats/${user.id}`),
-        fetch(`http://localhost:8000/dashboard/recent-activity/${user.id}`)
+        fetch(API_ENDPOINTS.DASHBOARD_STATS(user.id)),
+        fetch(API_ENDPOINTS.RECENT_ACTIVITY(user.id))
       ]);
       
       if (statsRes.ok) {
@@ -96,7 +97,7 @@ const DashboardPage = () => {
     setResult(null);
     
     try {
-      const res = await fetch("http://localhost:8000/predictive-shorting", {
+      const res = await fetch(API_ENDPOINTS.PREDICTIVE_SHORTING, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

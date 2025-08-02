@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Label } from "@/components/ui/label";
 import Navigation from "@/components/Navigation";
 import heroBackground from "@/assets/hero-background.jpg";
+import API_ENDPOINTS from "@/config/api";
 
 const LoginPage = () => {
   const [searchParams] = useSearchParams();
@@ -46,7 +47,7 @@ const LoginPage = () => {
     setRegisterError("");
     setRegisterSuccess("");
     try {
-      const res = await fetch("http://localhost:8000/auth/register", {
+      const res = await fetch(API_ENDPOINTS.REGISTER, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(registerData),
@@ -66,7 +67,7 @@ const LoginPage = () => {
     e.preventDefault();
     setLoginError("");
     try {
-      const res = await fetch("http://localhost:8000/auth/login", {
+      const res = await fetch(API_ENDPOINTS.LOGIN, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
