@@ -4176,3 +4176,5 @@ venv/Scripts/typer.exe
 venv/Scripts/uvicorn.exe
 venv/Scripts/watchfiles.exe
 venv/Scripts/websockets.exe
+
+.vercel
