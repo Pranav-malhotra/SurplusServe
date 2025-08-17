@@ -24,6 +24,7 @@ origins = [
     "http://localhost:8080",
     "https://surplus-serve-ms7664x92-pranavs-projects-a623ece8.vercel.app",
     "https://surplus-serve.vercel.app",
+    "https://surplus-serve-chi.vercel.app",  # New frontend domain
     "*"  # Allow all origins for now (you can restrict this later)
 ]
 
