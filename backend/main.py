@@ -45,3 +45,31 @@ def read_root():
 @app.get("/health")
 def health_check():
     return {"status": "healthy", "message": "API is running"}
+
+@app.get("/db/tables")
+def check_database_tables():
+    """Check if database tables exist and are accessible"""
+    try:
+        from sqlalchemy import inspect
+        from .database import engine
+        
+        inspector = inspect(engine)
+        tables = inspector.get_table_names()
+        
+        # Check if our expected tables exist
+        expected_tables = ['users', 'events', 'surplus_listings', 'feedbacks']
+        missing_tables = [table for table in expected_tables if table not in tables]
+        
+        return {
+            "status": "success",
+            "tables_found": tables,
+            "expected_tables": expected_tables,
+            "missing_tables": missing_tables,
+            "total_tables": len(tables)
+        }
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": f"Database connection failed: {str(e)}",
+            "error_type": type(e).__name__
+        }
